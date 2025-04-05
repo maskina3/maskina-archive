@@ -130,6 +130,127 @@
       color: #4dabf7;
       transform: scale(1.2);
     }
+    
+    /* Music section styles */
+    .music h3 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #4dabf7;
+    }
+    
+    .music p {
+      font-size: 1.2em;
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+    
+    .music-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .album {
+      transition: transform 0.3s ease;
+    }
+    
+    .album:hover {
+      transform: translateY(-10px);
+    }
+    
+    .spotify-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .album-cover {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .album-cover img {
+      width: 100%;
+      display: block;
+    }
+    
+    .play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .play-overlay i {
+      font-size: 3em;
+      color: #1DB954; /* Spotify green */
+    }
+    
+    .album:hover .play-overlay {
+      opacity: 1;
+    }
+    
+    .album-info {
+      margin-top: 12px;
+      text-align: center;
+    }
+    
+    .album-info h4 {
+      margin: 0;
+      font-size: 1em;
+      font-weight: 600;
+      color: #e0e0e0;
+    }
+    
+    .album-info p {
+      margin: 4px 0 0;
+      font-size: 0.85em;
+      color: #999;
+    }
+    
+    .spotify-profile {
+      margin-top: 40px;
+    }
+    
+    .spotify-profile-link {
+      display: inline-flex;
+      align-items: center;
+      background-color: #1DB954;
+      color: #000;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    
+    .spotify-profile-link:hover {
+      transform: scale(1.05);
+      background-color: #1ED760;
+    }
+    
+    .spotify-profile-link i {
+      margin-right: 8px;
+      font-size: 1.2em;
+    }
+    
+    /* Media query for smaller screens */
+    @media (max-width: 600px) {
+      .music-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -183,7 +304,7 @@
   </section>
 
   <section class="section socials">
-    <h3>follow me everywhere</h3>
+    <span>follow me everywhere</span>
     <div class="social-icons">
       <a href="https://github.com/maskina" target="_blank" aria-label="GitHub">
         <i class="fab fa-github"></i>
@@ -196,6 +317,80 @@
       </a>
       <a href="https://instagram.com/maskina" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- New Music Section -->
+  <section class="section music">
+    <h3>my favorite music</h3>
+    <p>check out what i've been listening to lately</p>
+    
+    <div class="music-container">
+      <div class="album">
+        <a href="https://open.spotify.com/album/ALBUM_ID1" target="_blank" class="spotify-link">
+          <div class="album-cover">
+            <img src="/api/placeholder/300/300" alt="Album Cover" />
+            <div class="play-overlay">
+              <i class="fab fa-spotify"></i>
+            </div>
+          </div>
+          <div class="album-info">
+            <h4>Album Title</h4>
+            <p>Artist Name</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="album">
+        <a href="https://open.spotify.com/album/ALBUM_ID2" target="_blank" class="spotify-link">
+          <div class="album-cover">
+            <img src="/api/placeholder/300/300" alt="Album Cover" />
+            <div class="play-overlay">
+              <i class="fab fa-spotify"></i>
+            </div>
+          </div>
+          <div class="album-info">
+            <h4>Album Title</h4>
+            <p>Artist Name</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="album">
+        <a href="https://open.spotify.com/album/ALBUM_ID3" target="_blank" class="spotify-link">
+          <div class="album-cover">
+            <img src="/api/placeholder/300/300" alt="Album Cover" />
+            <div class="play-overlay">
+              <i class="fab fa-spotify"></i>
+            </div>
+          </div>
+          <div class="album-info">
+            <h4>Album Title</h4>
+            <p>Artist Name</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="album">
+        <a href="https://open.spotify.com/album/ALBUM_ID4" target="_blank" class="spotify-link">
+          <div class="album-cover">
+            <img src="/api/placeholder/300/300" alt="Album Cover" />
+            <div class="play-overlay">
+              <i class="fab fa-spotify"></i>
+            </div>
+          </div>
+          <div class="album-info">
+            <h4>Album Title</h4>
+            <p>Artist Name</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="spotify-profile">
+      <a href="https://open.spotify.com/user/YOUR_SPOTIFY_USERNAME" target="_blank" class="spotify-profile-link">
+        <i class="fab fa-spotify"></i> follow my spotify
       </a>
     </div>
   </section>
