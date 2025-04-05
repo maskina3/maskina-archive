@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>maskina</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"/>
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -13,46 +13,85 @@
       color: #e0e0e0;
       scroll-behavior: smooth;
     }
+
     .section {
       padding: 80px 20px;
       text-align: center;
     }
+
     .hero {
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      position: relative;
     }
+
     .hero h1 {
       font-size: 4em;
       font-weight: 800;
       margin: 0;
     }
+
     .hero span {
       color: #4dabf7;
     }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      opacity: 0.7;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .scroll-indicator .arrow {
+      font-size: 1.5em;
+      animation: bounce 1.5s infinite;
+      margin-top: 5px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 0.7; }
+    }
+
     .about h2 {
       font-size: 2em;
       font-weight: 600;
       margin-bottom: 20px;
     }
+
     .about p {
       font-size: 1.1em;
       color: #bbb;
       margin-bottom: 40px;
     }
+
     .icons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
     }
+
     .icons img {
       width: 50px;
       height: 50px;
       filter: grayscale(100%) brightness(1.2);
       transition: transform 0.2s ease-in-out;
     }
+
     .icons img:hover {
       transform: scale(1.1);
       filter: none;
@@ -63,6 +102,10 @@
 
   <section class="section hero">
     <h1><span>Hello</span>, my name is <span>maskina</span></h1>
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="arrow">&#8595;</div>
+    </div>
   </section>
 
   <section class="section about" id="about">
