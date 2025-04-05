@@ -23,6 +23,29 @@
     .section {
       padding: 80px 20px;
       text-align: center;
+      position: relative;
+    }
+
+    /* Section divider styles */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(to right, rgba(77, 171, 247, 0), rgba(77, 171, 247, 0.7), rgba(77, 171, 247, 0));
+      max-width: 80%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .section-divider::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #4dabf7;
+      border-radius: 50%;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 8px #4dabf7;
     }
 
     .hero {
@@ -265,6 +288,8 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <section class="section about" id="about">
     <h2>i am a <span class="highlight">developer.</span></h2>
     <p>i do mod development, web dev, some backend stuff.</p>
@@ -305,6 +330,8 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <section class="section socials">
     <h3>follow me everywhere.</h3>
     <div class="social-icons">
@@ -323,7 +350,9 @@
     </div>
   </section>
 
-  <!-- New Music Section -->
+  <div class="section-divider"></div>
+
+  <!-- Music Section -->
   <section class="section music">
     <h3>my favorite music</h3>
     <p>check out what i've been listening to lately</p>
