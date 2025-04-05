@@ -1,90 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>maskina</title>
-
-  <!-- milligram css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-F0kUQYx4aZPHK8v2OPoN4tVUIf7aLRHJ1HapfqMPNuj1qgi+GSoHyozzMY0Oyp6E9Hyg4gMzYtGW2JcWy9GpqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- space grotesk font -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
   <style>
-    * {
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
     body {
-      background-color: #111;
-      color: #eee;
-      font-size: 0.9em;
-      margin: 30px auto;
-      max-width: 600px;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
     }
-
-    h1 {
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero h1 {
+      font-size: 4em;
+      font-weight: 800;
+      margin: 0;
+    }
+    .hero span {
+      color: #4dabf7;
+    }
+    .about h2 {
       font-size: 2em;
-      margin-bottom: 2rem;
-      color: #fff;
-    }
-
-    .container {
-      padding: 0 15px;
-    }
-
-    .link-container {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 8px;
-      border: 1px solid #333;
+      font-weight: 600;
       margin-bottom: 20px;
-      transition: background-color 0.2s ease;
     }
-
-    .link-container:hover {
-      background-color: #222;
+    .about p {
+      font-size: 1.1em;
+      color: #bbb;
+      margin-bottom: 40px;
     }
-
-    a {
-      font-size: 1.05em;
-      color: #aeeeee;
-      text-decoration: none;
-      font-weight: 500;
-      display: inline-block;
-      margin-bottom: 5px;
-      transition: color 0.2s ease;
+    .icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-
-    a:hover {
-      color: #d1ffff;
+    .icons img {
+      width: 50px;
+      height: 50px;
+      filter: grayscale(100%) brightness(1.2);
+      transition: transform 0.2s ease-in-out;
     }
-
-    p {
-      font-size: 0.9em;
-      color: #aaa;
-      margin-top: 0;
+    .icons img:hover {
+      transform: scale(1.1);
+      filter: none;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>maskina's archive</h1>
-    <div id="archive">
-      <div class="link-container">
-        <a href="https://index.nbabite.com/index-live2" target="_blank">NBA Streams</a>
-        <p>my go to for streaming nba games for free lol</p>
-      </div>
-      <div class="link-container">
-        <a href="https://saucing.neocities.org/" target="_blank">saucing the web</a>
-        <p>safest place 4 pirating shit especially adobe apps</p>
-      </div>
-      <div class="link-container">
-        <a href="https://www.chess.com/home" target="_blank">chess❤️</a>
-        <p>i love chess</p>
-      </div>
+
+  <section class="section hero">
+    <h1><span>Hello</span>, my name is <span>maskina</span></h1>
+  </section>
+
+  <section class="section about" id="about">
+    <h2>i am a developer</h2>
+    <p>i do minecraft mod development, web dev, some backend stuff.</p>
+    <div class="icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
     </div>
-  </div>
+  </section>
+
 </body>
 </html>
