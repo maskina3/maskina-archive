@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>maskina</title>
+
+  <!-- Milligram CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -44,15 +50,15 @@
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
-      font-size: 0.95em;
-      color: #aaa;
-      opacity: 0.9;
+      font-size: 1em;
+      color: #ccc;
+      opacity: 1;
       text-shadow: 0 0 4px #000;
       animation: fadeIn 2s ease-in;
     }
 
     .scroll-indicator .arrow {
-      font-size: 1.7em;
+      font-size: 2em;
       animation: bounce 1s infinite;
       margin-top: 4px;
     }
@@ -64,7 +70,7 @@
 
     @keyframes fadeIn {
       from { opacity: 0; }
-      to { opacity: 0.9; }
+      to { opacity: 1; }
     }
 
     .about h2 {
@@ -107,24 +113,22 @@
       color: #4dabf7;
     }
 
-    .social-links {
+    .social-icons {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-      margin-top: 20px;
+      gap: 30px;
+      margin-top: 10px;
     }
 
-    .social-link img {
-      width: 45px;
-      height: 45px;
-      filter: brightness(0.9);
-      transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    .social-icons a {
+      font-size: 2.2em;
+      color: #e0e0e0;
+      transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
     }
 
-    .social-link:hover img {
-      transform: scale(1.1);
-      filter: brightness(1.1);
+    .social-icons a:hover {
+      color: #4dabf7;
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -180,15 +184,18 @@
 
   <section class="section socials">
     <h3>follow me everywhere</h3>
-    <div class="social-links">
-      <a href="https://github.com/maskina" target="_blank" class="social-link">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" title="GitHub">
+    <div class="social-icons">
+      <a href="https://github.com/maskina" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
       </a>
-      <a href="https://twitter.com/maskina" target="_blank" class="social-link">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" title="Twitter">
+      <a href="https://twitter.com/maskina" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://discord.com/users/YOURID" target="_blank" class="social-link">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" alt="Discord" title="Discord">
+      <a href="https://discord.com/users/YOURID" target="_blank" aria-label="Discord">
+        <i class="fab fa-discord"></i>
+      </a>
+      <a href="https://instagram.com/maskina" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
       </a>
     </div>
   </section>
