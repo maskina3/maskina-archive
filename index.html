@@ -44,26 +44,27 @@
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
-      font-size: 0.9em;
-      color: #888;
-      opacity: 0.7;
+      font-size: 0.95em;
+      color: #aaa;
+      opacity: 0.9;
+      text-shadow: 0 0 4px #000;
       animation: fadeIn 2s ease-in;
     }
 
     .scroll-indicator .arrow {
-      font-size: 1.5em;
-      animation: bounce 1.5s infinite;
-      margin-top: 5px;
+      font-size: 1.7em;
+      animation: bounce 1s infinite;
+      margin-top: 4px;
     }
 
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
+      50% { transform: translateY(10px); }
     }
 
     @keyframes fadeIn {
       from { opacity: 0; }
-      to { opacity: 0.7; }
+      to { opacity: 0.9; }
     }
 
     .about h2 {
@@ -73,9 +74,14 @@
     }
 
     .about p {
-      font-size: 1.1em;
+      font-size: 1.2em;
       color: #bbb;
       margin-bottom: 40px;
+    }
+
+    .about .highlight {
+      color: #4dabf7;
+      font-weight: 700;
     }
 
     .icons {
@@ -88,13 +94,48 @@
     .icons img {
       width: 50px;
       height: 50px;
-      filter: grayscale(100%) brightness(1.2);
       transition: transform 0.2s ease-in-out;
     }
 
     .icons img:hover {
       transform: scale(1.1);
-      filter: none;
+    }
+
+    .socials h3 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #4dabf7;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .social-link {
+      padding: 15px 25px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      background-color: #2a2a2a;
+    }
+
+    .social-link a {
+      color: #4dabf7;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .social-link a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -109,7 +150,7 @@
   </section>
 
   <section class="section about" id="about">
-    <h2>i am a developer</h2>
+    <h2>i am a <span class="highlight">developer.</span></h2>
     <p>i do minecraft mod development, web dev, some backend stuff.</p>
     <div class="icons">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java">
@@ -118,6 +159,21 @@
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+    </div>
+  </section>
+
+  <section class="section socials">
+    <h3>find me online</h3>
+    <div class="social-links">
+      <div class="social-link">
+        <a href="https://github.com/maskina" target="_blank">GitHub</a>
+      </div>
+      <div class="social-link">
+        <a href="https://twitter.com/maskina" target="_blank">Twitter</a>
+      </div>
+      <div class="social-link">
+        <a href="https://discord.com/users/YOURID" target="_blank">Discord</a>
+      </div>
     </div>
   </section>
 
